@@ -35,6 +35,7 @@ function App() {
             <Avatar />
             <div className="data">
                 <Intro />
+                <Skill />
             </div>
         </div>
     );
@@ -55,6 +56,15 @@ function Intro() {
 }
 
 function SkillList() {}
+
+function Skill() {
+    return (
+        <div className="skill">
+            <p>Name</p>
+            <span>OK</span>
+        </div>
+    );
+}
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
