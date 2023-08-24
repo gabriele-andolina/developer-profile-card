@@ -2,6 +2,33 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./styles.css";
 
+const skills = [
+    {
+        name: "HTML + CSS",
+        level: "🤙🏻",
+    },
+    {
+        name: "JavaScript",
+        level: "🔥",
+    },
+    {
+        name: "Bootstrap",
+        level: "👌🏻",
+    },
+    {
+        name: "Python",
+        level: "👌🏻",
+    },
+    {
+        name: "Django",
+        level: "🤙🏻",
+    },
+    {
+        name: "React",
+        level: "🔥",
+    },
+];
+
 function App() {
     return (
         <div className="card">
