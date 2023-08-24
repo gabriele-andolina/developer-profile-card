@@ -35,7 +35,7 @@ function App() {
             <Avatar />
             <div className="data">
                 <Intro />
-                <Skill />
+                <SkillList />
             </div>
         </div>
     );
@@ -55,13 +55,19 @@ function Intro() {
     );
 }
 
-function SkillList() {}
+function SkillList() {
+    return (
+        <div>
+            <Skill name={skills[0].name} level={skills[0].level} />
+        </div>
+    );
+}
 
-function Skill() {
+function Skill(props) {
     return (
         <div className="skill">
-            <p>Name</p>
-            <span>OK</span>
+            <p>{props.name}</p>
+            <span>{props.level}</span>
         </div>
     );
 }
