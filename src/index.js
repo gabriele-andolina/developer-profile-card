@@ -2,10 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 function App() {
-    return <div></div>;
+    return (
+        <div className="card">
+            <Avatar />
+        </div>
+    );
 }
 
-function Avatar() {}
+function Avatar() {
+    return <img src="images/profile.jpg"></img>;
+}
 
 function Intro() {}
 
