@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import "./styles.css";
 
 function App() {
     return (
@@ -10,7 +11,7 @@ function App() {
 }
 
 function Avatar() {
-    return <img src="images/profile.jpg"></img>;
+    return <img src="images/profile.jpg" className="avatar"></img>;
 }
 
 function Intro() {}
