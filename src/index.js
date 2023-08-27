@@ -6,26 +6,32 @@ const skills = [
     {
         name: "HTML + CSS",
         level: "🤙🏻",
+        backgroundColor: "#f06529",
     },
     {
         name: "JavaScript",
         level: "🔥",
+        backgroundColor: "#f0DB4f",
     },
     {
         name: "Bootstrap",
         level: "👌🏻",
+        backgroundColor: "#563d7c",
     },
     {
         name: "Python",
         level: "👌🏻",
+        backgroundColor: "#306998",
     },
     {
         name: "Django",
         level: "🤙🏻",
+        backgroundColor: "#092e20",
     },
     {
         name: "React",
         level: "🔥",
+        backgroundColor: "#61DBfb",
     },
 ];
 
@@ -42,31 +48,49 @@ function App() {
 }
 
 function Avatar() {
-    return <img src="images/profile.jpg" className="avatar"></img>;
+    return (
+        <img
+            src="images/profile.jpg"
+            alt="Gabriele Andolina"
+            className="avatar"
+        ></img>
+    );
 }
 
 function Intro() {
     return (
-        <p>
-            I'm a passionate junior web developer with knowledge of HTML, CSS,
-            JavaScript, Python and Django. Currently studying React and planning
-            two custom projects with the Django REST framework.
-        </p>
+        <div>
+            <h1>Gabriele Andolina</h1>
+            <p>
+                I'm a passionate junior web developer with knowledge of HTML,
+                CSS, JavaScript, Python and Django. Currently studying React and
+                planning two custom projects with the Django REST framework.
+            </p>
+        </div>
     );
 }
 
 function SkillList() {
     return (
-        <div>
-            <Skill name={skills[0].name} level={skills[0].level} />
+        <div className="skill-list">
+            {skills.map((skill) => (
+                <Skill
+                    name={skill.name}
+                    level={skill.level}
+                    backgroundColor={skill.backgroundColor}
+                />
+            ))}
         </div>
     );
 }
 
 function Skill(props) {
     return (
-        <div className="skill">
-            <p>{props.name}</p>
+        <div
+            className="skill"
+            style={{ backgroundColor: props.backgroundColor }}
+        >
+            <span>{props.name}</span>
             <span>{props.level}</span>
         </div>
     );
