@@ -1,5 +1,7 @@
 # **Challenge #1&2 - Profile Card**
 
+![Final project](public/docs/developer-card-png.png)
+
 This small project is the combination of the first two challenges in "The Ultimate React Course 2023: React, Redux & More" by Jonas Schmedtmann. 
 
 ## **1. Practiced Skills**
