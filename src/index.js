@@ -75,23 +75,25 @@ function SkillList() {
         <div className="skill-list">
             {skills.map((skill) => (
                 <Skill
-                    name={skill.name}
-                    level={skill.level}
-                    backgroundColor={skill.backgroundColor}
+                    skill={skill}
+                    key={skill.name}
+                    // name={skill.name}
+                    // level={skill.level}
+                    // backgroundColor={skill.backgroundColor}
                 />
             ))}
         </div>
     );
 }
 
-function Skill(props) {
+function Skill({ skill }) {
     return (
         <div
             className="skill"
-            style={{ backgroundColor: props.backgroundColor }}
+            style={{ backgroundColor: skill.backgroundColor }}
         >
-            <span>{props.name}</span>
-            <span>{props.level}</span>
+            <span>{skill.name}</span>
+            <span>{skill.level}</span>
         </div>
     );
 }
