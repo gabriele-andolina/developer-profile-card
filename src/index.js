@@ -5,32 +5,32 @@ import "./styles.css";
 const skills = [
     {
         name: "HTML + CSS",
-        level: "🤙🏻",
+        level: "intermediate",
         backgroundColor: "#f06529",
     },
     {
         name: "JavaScript",
-        level: "🔥",
+        level: "advanced",
         backgroundColor: "#f0DB4f",
     },
     {
         name: "Bootstrap",
-        level: "👌🏻",
+        level: "beginner",
         backgroundColor: "#563d7c",
     },
     {
         name: "Python",
-        level: "👌🏻",
+        level: "beginner",
         backgroundColor: "#306998",
     },
     {
         name: "Django",
-        level: "🤙🏻",
+        level: "intermediate",
         backgroundColor: "#092e20",
     },
     {
         name: "React",
-        level: "🔥",
+        level: "advanced",
         backgroundColor: "#61DBfb",
     },
 ];
@@ -93,7 +93,10 @@ function Skill({ skill }) {
             style={{ backgroundColor: skill.backgroundColor }}
         >
             <span>{skill.name}</span>
-            <span>{skill.level}</span>
+
+            {skill.level === "beginner" && <span>👌🏻</span>}
+            {skill.level === "intermediate" && <span>🤙🏻</span>}
+            {skill.level === "advanced" && <span>🔥</span>}
         </div>
     );
 }
