@@ -94,9 +94,11 @@ function Skill({ skill }) {
         >
             <span>{skill.name}</span>
 
-            {skill.level === "beginner" && <span>👌🏻</span>}
-            {skill.level === "intermediate" && <span>🤙🏻</span>}
-            {skill.level === "advanced" && <span>🔥</span>}
+            <span>
+                {skill.level === "beginner" && "👌🏻"}
+                {skill.level === "intermediate" && "🤙🏻"}
+                {skill.level === "advanced" && "🔥"}
+            </span>
         </div>
     );
 }
